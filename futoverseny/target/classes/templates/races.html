@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Versenyek</title>
+</head>
+<body>
+    <h1>Versenyek</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Név</th>
+                <th>Helyszín</th>
+                <th>Dátum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="race : ${races}">
+                <td th:text="${race.name}">Race Name</td>
+                <td th:text="${race.location}">Race Location</td>
+                <td th:text="${race.date}">Race Date</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+

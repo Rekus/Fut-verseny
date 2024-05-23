@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Versenyek</title>
+</head>
+<body>
+<h1>Versenyek</h1>
+<ul>
+    <li th:each="race : ${races}">
+        <a th:href="@{/race/{id}(id=${race.id})}" th:text="${race.name}">Race</a>
+    </li>
+</ul>
+<a href="/newRace">Add New Race</a>
+</body>
+</html>
